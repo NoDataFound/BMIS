@@ -102,7 +102,7 @@ while True:
     sleep(3)
     articles = driver.find_elements(By.XPATH, "//article[@data-testid='tweet']")
     Tweets2 = list(set(Tweets))
-    if len(Tweets2) > 1:
+    if len(Tweets2) > 100:
         break
 
 dataframe = {'UserName': Usernames, 'TimeStamps': TimeStamps, 'Tweets': Tweets, 'Replies': Replies, 'Retweets': Retweets, 'Likes': Likes,}
